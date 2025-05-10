@@ -1,0 +1,102 @@
+# Phoenix Requirements
+
+## Requirements
+
+- Replace Ambrosia's Flink Stateful Function components with something better
+- Reduce the development time to get data into BigQuery
+- Keep it super simple
+
+## References
+
+- BigQuery Data Objects: https://officespacesoftware.atlassian.net/wiki/x/FgCzqQ 
+- No more Fabrications
+- Quick killing of Statefun would be huge for Phoenix
+- Event Streaming
+- Use Cases
+    - What are we trying to solve and when
+    - Use these as a reference
+    - Something to anchor our work around
+- What is GoSpace using
+- CDC - Change Data Capture?
+- Need pain points and when we are planning to solve them
+- Data out of Kafka joined temporally and write to multiple sources
+- GraphQL Federation - Integration layer
+    - Event Driven Subscription
+- Options
+    - Dataflow?
+    - Akka
+    - XTDB
+- Need to handle Audit Logs (Asset Management as a POC)
+- Need to handle out-of-order events
+    - this is because of our presence imports
+    - what is our max supported timeframe for this? one quarter? one year?
+    - are there any solutions that minimize this impact?
+- Get rid of Insights Hub
+- Dependent on Phoenix
+    - AM Audit Logs
+    - Request Manager Custom Fields
+- GraphQL Federation
+- Ops Requests
+    - Seeing where a message is in the system (UUID for tracking, some sort of trace ID)
+    - Currently we have debug mode and can track by message ID
+    - Dashboard with Phoenix components, can see where the messages are getting stuck and light that component up red
+        - metric counts of messages in and out with instance id / tenant id we can track what is moving
+    - should be async
+    - use prometheus, whatever solution we come up with should have prometheus solutions
+- Data Vault?
+- We need to call out the milestones
+    - Is there a quick win here that we can front-load
+    - Outline the milestones before Feature Planning in Sprint 10
+- What we need for feature planning
+    - TRD
+    - POCs for possible solutions
+    - Milestones called out
+    - SWOT Analysis
+        - Pain Points from Ambrosia
+        - Pain Points from Ops
+        - Pain Points from SE
+        - Pain Points from QE
+        - Pain Points from Management 
+    - Requirements:
+        - From Product - Chris, Borna, Jeremy, Kiley, etc.
+        - From Ops
+            - Structured Logging by tenant id, able to trace a message through the system
+        - From SE
+        - From QE
+        - From Management
+    - Google meeting to talk through options there
+    - First 10 tickets for first milestone
+    - What do we want to take on as our first statefun to replace?
+    - Looking at May 12th for Feature Planning
+    - We need the middle layer of transforming data from the diagram in Sprint 9
+    - Generic event transforming thing might be more useful
+- Need to support Tesla
+- Need to support Medtronic
+- Dataflow
+    - Biggest advantage is that it's managed
+    - Wrapper around Beam
+    - Observability
+    - Built-in Templates - pretty basic, not sure how much we will use
+    - Will need to build out custom templates for our solution
+    - Can Dataflow enrich from Postgres (XTDB)?
+    - Need to get my head wrapped around pricing for Dataflow
+- XTDB
+    - Database turned inside out
+    - Postgres wrapper around Kafka
+    - Allows managing valid times (from start to end, but can write SQL that would give)
+    - Need to understand performance
+    - XTDB per client?
+        - Ideally no
+        - does XTDB support sharding?
+- Separate solutions for managing batch vs. streaming
+    - Dataflow for streaming
+    - XTDB for batch
+- SADA
+    - What are the costs of Dataflow?
+- ELT
+    - Take data, process to parquet, dump to storage somewhere
+- Lift & Shift Statefun
+    - Everything except Greetly
+- Two Separate solutions, one to handle out of order, one to handle realtime, realtime pulls from out of order until it needs enrichment
+- Need to have data in BigQuery
+- Kafka Connect?
