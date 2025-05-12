@@ -1,4 +1,4 @@
-# Technical Requirements Document (TRD) - Project Phoenix
+# TRD: Data Fabric Migration Phase 1 - Project Phoenix
 
 **Document Version:** 1.0  
 **Date:** 2025-05-11  
@@ -54,25 +54,25 @@ Project Phoenix is the first phase of a comprehensive Data Fabric migration stra
 - Replace Flink StateFun component with Dataflow-based solution
 - Focus on 1:1 migration of existing functionality
 - Establish technical foundation for future phases
-- Timeline: [Start Date] to [End Date]
+- Timeline: May 2025 to September 2025
 
 #### Phase 2: Streamline Data Migration
 - Optimize and enhance data pipeline for new data types
 - Improve developer experience for adding new entities
 - Build on Project Phoenix architecture
-- Tentative Timeline: [Start Date] to [End Date]
+- Timeline: TBD
 
 #### Phase 3: GraphQL API Integration
 - Enable external systems to trigger events
 - Integrate presence events with reporting
 - Establish GraphQL as primary integration point
-- Tentative Timeline: [Start Date] to [End Date]
+- Timeline: TBD
 
 #### Phase 4: Apigee Replacement
 - Unify all API layers into a federated GraphQL API
 - Fully replace Apigee functionality
 - Complete the Data Fabric vision
-- Tentative Timeline: [Start Date] to [End Date]
+- Timeline: TBD
 
 ### 2.3 Stakeholders and References
 
@@ -1551,9 +1551,11 @@ A comprehensive risk assessment with full risk categories, mitigation strategies
 |---------|------|--------|-------------|
 | 0.1 | 2025-05-01 | Jeff "Huey" Huelsbeck | Initial draft structure |
 | 0.2 | 2025-05-05 | Jeff "Huey" Huelsbeck | Added requirements and architecture sections |
-| 0.3 | 2025-05-08 | Jeff "Huey" Huelsbeck | Added implementation strategy and operational model |
+| 0.3 | 2025-05-06 | Jeff "Huey" Huelsbeck | Added implementation strategy and operational model |
+| 0.4 | 2025-05-09 | Jeff "Huey" Huelsbeck | Integrate feedback from Team Luna |
 | 0.4 | 2025-05-10 | Jeff "Huey" Huelsbeck | Added revised timelines for lean development & agentic implementation |
 | 0.5 | 2025-05-11 | Jeff "Huey" Huelsbeck | Added lean implementation approach with 2 developers |
+| 1.0 | 2025-05-11 | Jeff "Huey" Huelsbeck | Publish version 1.0 of the document |
 
 ---
 
