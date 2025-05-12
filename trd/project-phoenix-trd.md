@@ -90,7 +90,7 @@ Project Phoenix is the first phase of a comprehensive Data Fabric migration stra
 - [BigQuery Tables and Schemas](source/bigquery-tables-and-schema-20250508.md)
 - [Ambrosia System Architecture Summary](source/ambrosia-system-arcitecture-summary.md)
 - [Luna Ambrosia Feedback](source/luna-ambrosia-feedback.md)
-- [Huey Notes](source/huey-notes.md)
+- [Architecture Notes](source/architecture-notes.md)
 - [GoBots Project Phoenix Notes](source/gobots-project-phoenix-notes.md)
 
 ## 3. Current System Analysis
@@ -1549,13 +1549,11 @@ A comprehensive risk assessment with full risk categories, mitigation strategies
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 0.1 | 2025-05-01 | [Author] | Initial draft structure |
-| 0.2 | 2025-05-05 | [Author] | Added requirements and architecture sections |
-| 0.3 | 2025-05-08 | [Author] | Added implementation strategy and operational model |
-| 0.4 | 2025-05-10 | [Author] | Added revised timelines for 4-month implementation |
-| 0.5 | 2025-05-11 | [Author] | Added lean implementation approach with 2 developers |
-| 0.9 | 2025-05-11 | [Author] | Updated terminology from "batch" to "async" throughout |
-| 1.0 | 2025-05-11 | [Author] | Complete TRD ready for review |
+| 0.1 | 2025-05-01 | Jeff "Huey" Huelsbeck | Initial draft structure |
+| 0.2 | 2025-05-05 | Jeff "Huey" Huelsbeck | Added requirements and architecture sections |
+| 0.3 | 2025-05-08 | Jeff "Huey" Huelsbeck | Added implementation strategy and operational model |
+| 0.4 | 2025-05-10 | Jeff "Huey" Huelsbeck | Added revised timelines for lean development & agentic implementation |
+| 0.5 | 2025-05-11 | Jeff "Huey" Huelsbeck | Added lean implementation approach with 2 developers |
 
 ---
 
