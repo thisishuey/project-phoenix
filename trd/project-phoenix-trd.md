@@ -3,7 +3,7 @@
 **Document Version:** 1.0  
 **Date:** 2025-05-11  
 **Status:** Draft  
-**Author:** [Author Name]  
+**Author:** Jeff "Huey" Huelsbeck
 **Last Updated:** 2025-05-11
 
 ## 1. Executive Summary
@@ -101,7 +101,7 @@ Ambrosia is a stateful event processing framework built on Apache Flink StateFun
 
 The main components include:
 
-1. **Sources**: Generating events from Huddle application, external system integrations, batch imports, and fabrications.
+1. **Sources**: Generating events from Huddle application, external system integrations, async imports, and fabrications.
 
 2. **Kafka**: Serving as the message broker for event streaming with topics organized by source.
 
@@ -194,7 +194,7 @@ The current operational approach for Ambrosia has several challenges:
 #### 4.1.1 Event Streaming Capabilities
 
 - **F1**: The system must consume events from Kafka topics, maintaining compatibility with existing event formats.
-- **F2**: The system must support both real-time event processing and batch processing for historical data.
+- **F2**: The system must support both real-time event processing and asynchronous processing for historical data.
 - **F3**: The system must maintain the ability to process events for all 9 current entity types.
 - **F4**: The system must support event replay capabilities for recovery and reprocessing scenarios.
 - **F5**: The system must provide mechanisms to handle both individual events and bulk events.
@@ -240,7 +240,7 @@ The current operational approach for Ambrosia has several challenges:
 #### 4.2.1 Performance Metrics and SLAs
 
 - **NF1**: The system must process real-time events with end-to-end latency of no more than 5 seconds under normal conditions.
-- **NF2**: The system must process batch events at a rate of at least 1000 events per second.
+- **NF2**: The system must process asynchronous events at a rate of at least 1000 events per second.
 - **NF3**: The system must achieve 99.9% uptime for the event processing pipeline.
 - **NF4**: The system must handle peak loads of at least 5x the average throughput without degradation.
 - **NF5**: The system must maintain performance SLAs even during regular maintenance operations.
@@ -372,7 +372,7 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
 1. **Sources**:
    - Huddle application events
    - External system integrations
-   - Batch imports and fabrications
+   - Async imports and fabrications
    - No changes required to existing event producers
 
 2. **Kafka**:
@@ -439,7 +439,7 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
 #### Core Technologies
 
 1. **Google Cloud Dataflow**:
-   - Fully managed service for stream and batch processing
+   - Fully managed service for stream and asynchronous processing
    - Built on Apache Beam for unified programming model
    - Autoscaling capabilities for efficient resource utilization
    - Comprehensive monitoring and diagnostics
@@ -456,7 +456,7 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
    - Supports SQL queries for analysis and reporting
 
 4. **Apache Beam**:
-   - Unified programming model for batch and streaming
+   - Unified programming model for stream and asynchronous processing
    - Used by Dataflow for pipeline implementation
    - Supports Java and Python SDKs
 
@@ -584,7 +584,7 @@ Based on the requirements and technology evaluation, three potential architectur
                      │  │                 ▼
                      │  │           ┌─────────────┐
                      │  └──────────▶│  Dataflow   │
-                     │              │  (Batch)    │
+                     │              │  (Async)    │
                      │              │             │
                      ▼              └─────────────┘
                ┌─────────────┐
@@ -609,7 +609,7 @@ Based on the requirements and technology evaluation, three potential architectur
 - Highest operational overhead
 
 **Best suited for**:
-- Systems with clearly separable real-time vs. historical processing requirements
+- Systems with clearly separable real-time vs. asynchronous processing requirements
 - High volume of both real-time and historical data
 - Need for optimized performance for different workload types
 
@@ -692,4 +692,4 @@ The architecture incorporates several design elements that prepare for Phases 3 
 3. **API Design Patterns**:
    - Consistent entity representations across the system
    - Standardized error handling and response formats
-   - Clear separation
+
