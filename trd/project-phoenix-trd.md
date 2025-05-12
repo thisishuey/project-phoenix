@@ -78,20 +78,20 @@ Project Phoenix is the first phase of a comprehensive Data Fabric migration stra
 
 #### Key Stakeholders
 
-- **Product Management**: Chris, Borna, Jeremy, Kiley
-- **Engineering**: [Engineering Lead Names]
+- **Product Management**: [Product Representative]
+- **Engineering**: [Engineering Representative]
 - **Operations**: [Operations Team Representative]
 - **Quality Engineering**: [QE Representative]
 - **Security**: [Security Team Representative]
-- **Executive Sponsor**: [Executive Name]
+- **Executive Sponsor**: [Executive Representative]
 
 #### Reference Documents
 
-- [BigQuery Tables and Schemas](source/bigquery-tables-and-schema-20250508.md)
-- [Ambrosia System Architecture Summary](source/ambrosia-system-arcitecture-summary.md)
-- [Luna Ambrosia Feedback](source/luna-ambrosia-feedback.md)
 - [Architecture Notes](source/architecture-notes.md)
+- [Ambrosia System Architecture Summary](source/ambrosia-system-arcitecture-summary.md)
+- [BigQuery Tables and Schemas](source/bigquery-tables-and-schema-20250508.md)
 - [GoBots Project Phoenix Notes](source/gobots-project-phoenix-notes.md)
+- [Luna Ambrosia Feedback](source/luna-ambrosia-feedback.md)
 
 ## 3. Current System Analysis
 
