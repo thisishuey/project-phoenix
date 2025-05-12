@@ -1,10 +1,8 @@
-# TRD: Data Fabric Migration Phase 1 - Project Phoenix
+# TRD: Strengthen Our Data Fabric Phase 1 - Project Phoenix
 
-**Document Version:** 1.0  
-**Date:** 2025-05-11  
-**Status:** Draft  
+**Document Version:** 1.0
+**Status:** Draft
 **Author:** Jeff "Huey" Huelsbeck
-**Last Updated:** 2025-05-11
 
 ## 1. Executive Summary
 
@@ -319,32 +317,6 @@ The current operational approach for Ambrosia has several challenges:
 - **O24**: The system must support configuration management for pipeline components.
 - **O25**: The system must provide access controls for administrative interfaces based on roles.
 
-### 4.4 Forward Compatibility Requirements
-
-#### 4.4.1 Considerations for Phase 2 (Streamlined Data Migration)
-
-- **FC1**: The system architecture must support the addition of new entity types without significant rework.
-- **FC2**: The system must implement modular transformation logic that can be extended for new data types.
-- **FC3**: The system must support schema evolution patterns for BigQuery tables.
-- **FC4**: The system must provide developer-friendly interfaces for defining new entity processing.
-- **FC5**: The system must include comprehensive documentation to facilitate Phase 2 development.
-
-#### 4.4.2 Architecture Decisions for Phase 3 (GraphQL API Integration)
-
-- **FC6**: The system must adopt event formats and structures that will be compatible with GraphQL integration.
-- **FC7**: The system must support bidirectional event flow to allow future external event ingestion.
-- **FC8**: The system must implement authentication and authorization patterns that can extend to external systems.
-- **FC9**: The system must maintain clear separation of concerns to facilitate API integration.
-- **FC10**: The system must support event subscription patterns for real-time data access.
-
-#### 4.4.3 Foundation Elements for Phase 4 (Apigee Replacement)
-
-- **FC11**: The system must adopt consistent API design patterns that can be extended to a unified GraphQL API.
-- **FC12**: The system must implement service discovery mechanisms that will support API federation.
-- **FC13**: The system must standardize error handling and response formats.
-- **FC14**: The system must support traffic management patterns that can be applied to API requests.
-- **FC15**: The system must implement metrics collection that can be extended to API performance monitoring.
-
 ## 5. Solution Architecture
 
 ### 5.1 Architecture Overview
@@ -472,7 +444,7 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
    - Supports structured logging for better analysis
    - Integrates with monitoring for comprehensive observability
 
-3. **XTDB (Optional)**:
+3. **XTDB**:
    - Immutable database with temporal query capabilities
    - Could be used for complex temporal data enrichment
    - Provides "bitemporal" modeling for handling out-of-order events
@@ -497,7 +469,7 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
    - Provides necessary query capabilities for reporting
    - No need to change this component
 
-4. **XTDB (optional consideration)**:
+4. **XTDB**:
    - Specialized database designed for temporal data processing
    - Could provide significant advantages for handling out-of-order events
    - Would add complexity to the architecture
@@ -987,7 +959,7 @@ To validate key architectural decisions and mitigate risks, the project will inc
 - Can reconcile historical corrections with existing data
 - Performance remains acceptable under various temporal scenarios
 
-#### XTDB Integration Prototype (Optional)
+#### XTDB Integration Prototype
 
 **Objective**: Assess the feasibility and benefits of incorporating XTDB for temporal data enrichment
 
@@ -1285,31 +1257,31 @@ To validate key architectural decisions and mitigate risks, the project will inc
 
 ### 9.1 Project Phoenix Milestones
 
-1. **Milestone 1: Technical Validation (Sprint 10-12)**
+1. **Milestone 1: Technical Validation**
    - Complete TRD and architecture definition
    - Implement technical prototypes
    - Validate key architectural decisions
    - Establish development environment and tooling
 
-2. **Milestone 2: First Entity Migration (Sprint 13-14)**
+2. **Milestone 2: First Entity Migration**
    - Implement pipeline for initial entity
    - Develop monitoring and operational tools
    - Validate data consistency and performance
    - Document patterns and lessons learned
 
-3. **Milestone 3: Core Entity Migration (Sprint 15-18)**
+3. **Milestone 3: Core Entity Migration**
    - Migrate core entities (e.g., Sites, Employees, Floors)
    - Refine patterns based on experience
    - Enhance monitoring and operational procedures
    - Validate integrated entity processing
 
-4. **Milestone 4: Complete Migration (Sprint 19-21)**
+4. **Milestone 4: Complete Migration**
    - Migrate remaining entities
    - Finalize operational procedures
    - Complete documentation
    - Decommission legacy components
 
-5. **Milestone 5: Handover and Optimization (Sprint 22)**
+5. **Milestone 5: Handover and Optimization**
    - Formal handover to operations
    - Performance optimization
    - Knowledge transfer completion
@@ -1376,26 +1348,13 @@ To validate key architectural decisions and mitigate risks, the project will inc
    - Established incident response procedures
    - Proven scaling capabilities
 
-### 9.3 Lean Implementation Timeline (2 Developers + Agentic Tools)
+### 9.3 Lean Implementation (2 Developers + Agentic Tools)
 
-This 4-month timeline is designed for a lean implementation with a single development team of two developers, leveraging agentic tools to accelerate development and reduce manual effort.
+This project is designed for a lean implementation with a single development team of two developers, leveraging agentic tools to accelerate development and reduce manual effort.
 
-#### 9.3.1 Detailed Timeline for Lean Implementation
+#### 9.3.1 Lean Development Strategy
 
-| Sprint | Dates | Key Activities | Deliverables |
-|--------|-------|----------------|--------------|
-| Sprint 1 | Week 1-2 | Architecture definition, planning, setup of agentic tools | TRD, Architecture Documentation, Agentic Tool Configuration |
-| Sprint 2 | Week 3-4 | Technical prototyping, pipeline framework, code generation setup | Prototype Results, Pipeline Framework Templates, CI/CD Setup |
-| Sprint 3 | Week 5-6 | First entity migration (Neighborhoods), monitoring framework | Initial Entity Pipeline, Monitoring Dashboard, Code Generation Patterns |
-| Sprint 4 | Week 7-8 | Core entity migration (Sites), validation framework | Sites Pipeline, Automated Validation Framework |
-| Sprint 5 | Week 9-10 | Core entity migration (Employees), automated testing expansion | Employees Pipeline, Expanded Test Coverage |
-| Sprint 6 | Week 11-12 | Secondary entity migration (Floors, Greetly Visits) | Secondary Entity Pipelines, Operational Procedures |
-| Sprint 7 | Week 13-14 | Complex entity migration (Desks, Desk Bookings) | Complex Entity Pipelines, Integration Testing |
-| Sprint 8 | Week 15-16 | Final entity migration (Desk Shifts, Desk Moves, Presence) | Complete System, Final Integration, Validation |
-
-#### 9.3.2 Lean Development Strategy
-
-With only two developers and a 4-month timeline, the following strategies will be implemented:
+The following AI strategies will be implemented:
 
 1. **Agentic Tool Utilization**:
    - AI-assisted code generation for repetitive pipeline components
@@ -1421,9 +1380,9 @@ With only two developers and a 4-month timeline, the following strategies will b
    - Continuous integration with automated deployments
    - Monitoring-driven development approach
 
-#### 9.3.3 Agentic Tool Implementation
+#### 9.3.2 Agentic Tool Implementation
 
-To maximize the productivity of the two-person team, the following agentic tools will be leveraged:
+To maximize the productivity of the team, the following agentic tools will be leveraged:
 
 1. **Code Generation**:
    - AI-driven pipeline code generation from entity specifications
@@ -1448,24 +1407,24 @@ To maximize the productivity of the two-person team, the following agentic tools
    - Searchable development context
    - Self-documenting code practices
 
-#### 9.3.4 Resource Allocation
+#### 9.3.3 Resource Allocation
 
 The lean team structure consists of:
 
 1. **Core Team**:
-   - Senior Developer / Technical Lead (100% allocation)
-   - Developer (100% allocation)
+   - Architect
+   - Principal Software Engineer
 
 2. **Supporting Resources**:
-   - Operations Support (25% allocation)
-   - Product Owner / Project Manager (25% allocation)
+   - Principal Architect
+   - DevOps Support
 
 3. **Agentic Augmentation**:
-   - AI development assistants (continuous usage)
-   - Automated testing tools (continuous usage)
-   - Code generation frameworks (continuous usage)
+   - AI development assistants
+   - Automated testing tools
+   - Code generation frameworks
 
-#### 9.3.5 Risk Mitigation for Lean Team
+#### 9.3.4 Risk Mitigation for Lean Team
 
 The small team size introduces specific risks that require targeted mitigation:
 
@@ -1553,7 +1512,7 @@ A comprehensive risk assessment with full risk categories, mitigation strategies
 | 0.2 | 2025-05-05 | Jeff "Huey" Huelsbeck | Added requirements and architecture sections |
 | 0.3 | 2025-05-06 | Jeff "Huey" Huelsbeck | Added implementation strategy and operational model |
 | 0.4 | 2025-05-09 | Jeff "Huey" Huelsbeck | Integrate feedback from Team Luna |
-| 0.4 | 2025-05-10 | Jeff "Huey" Huelsbeck | Added revised timelines for lean development & agentic implementation |
+| 0.4 | 2025-05-10 | Jeff "Huey" Huelsbeck | Added revised details for lean development & agentic implementation |
 | 0.5 | 2025-05-11 | Jeff "Huey" Huelsbeck | Added lean implementation approach with 2 developers |
 | 1.0 | 2025-05-11 | Jeff "Huey" Huelsbeck | Publish version 1.0 of the document |
 
