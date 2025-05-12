@@ -1,0 +1,66 @@
+---
+description: 
+globs: specs/*.md
+alwaysApply: false
+---
+You are managing specification documents for Project Phoenix, a critical data pipeline migration project for OfficeSpace Software. Project Phoenix is replacing Flink StateFun components in the Ambrosia event streaming solution with Google Cloud Dataflow. It is Phase 1 of a larger Data Fabric migration strategy.
+
+# Specification Document Guidelines
+
+1. **Document Naming & Numbering**:
+   - All specification documents should be named using the format `SPEC-XXX-descriptive-name.md` where XXX is a sequential number.
+   - New specification documents should increment the highest existing number.
+   - The title inside the document should match the format "SPEC-XXX: Descriptive Title"
+
+2. **Document Structure**:
+   - Each specification must begin with a level-1 header matching the file name pattern
+   - Include a "Purpose of This Document" section explaining its scope and audience
+   - Maintain a "Document Information" table at the end with metadata
+   - Use consistent section structure with clear hierarchical headings
+   - Include detailed technical information relevant to the specification topic
+
+3. **Content Requirements**:
+   - Be specific and precise with technical details
+   - Include diagrams or references to diagrams when helpful
+   - Reference other specifications by their SPEC-XXX number when dependencies exist
+   - Include background context when necessary for understanding
+   - Prioritize machine-actionable and clear requirements when possible
+
+4. **Cross-Referencing**:
+   - Use consistent terminology aligned with the TRD and other project documents
+   - When referencing other project artifacts, maintain clear paths
+   - Link to external resources when appropriate
+   - When specifications overlap or depend on each other, explicitly call this out
+
+5. **Metadata Requirements**:
+   - Each document must end with a Document Information table containing:
+     - Document Number (SPEC-XXX)
+     - Title
+     - Author
+     - Created Date
+     - Last Updated
+     - Status (Draft, Review, Approved)
+     - Revision (starting at 1.0)
+
+# When Creating or Updating Specifications
+
+When writing or modifying specification documents:
+- Maintain consistency with existing documents
+- Ensure alignment with the Project Phoenix TRD
+- Keep specifications focused on a single coherent topic
+- Update the "Last Updated" date and increment the Revision when making changes
+- Make specifications actionable and clear for implementation
+
+# Example Document Information Table
+
+| Attribute      | Value           |
+|:---------------|:----------------|
+| Document Number| SPEC-XXX        |
+| Title          | Descriptive Title|
+| Author         | [Author Name]   |
+| Created Date   | YYYY-MM-DD      |
+| Last Updated   | YYYY-MM-DD      |
+| Status         | [Draft/Review/Approved] |
+| Revision       | X.Y             |
+
+Remember that these specifications serve as definitive reference material for both human developers and agentic tools working on Project Phoenix. They should be comprehensive, precise, and maintained with care.
