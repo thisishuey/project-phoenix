@@ -16,7 +16,7 @@
     - What are we trying to solve and when
     - Use these as a reference
     - Something to anchor our work around
-- What is GoSpace using
+- What is GoSpace using?
 - CDC - Change Data Capture?
 - Need pain points and when we are planning to solve them
 - Data out of Kafka joined temporally and write to multiple sources
@@ -24,8 +24,9 @@
     - Event Driven Subscription
 - Options
     - Dataflow?
-    - Akka
-    - XTDB
+    - Akka?
+    - XTDB?
+    - others?
 - Need to handle Audit Logs (Asset Management as a POC)
 - Need to handle out-of-order events
     - this is because of our presence imports
@@ -52,13 +53,8 @@
     - POCs for possible solutions
     - Milestones called out
     - SWOT Analysis
-        - Pain Points from Ambrosia
-        - Pain Points from Ops
-        - Pain Points from SE
-        - Pain Points from QE
-        - Pain Points from Management 
+        - Pain Points
     - Requirements:
-        - From Product - Chris, Borna, Jeremy, Kiley, etc.
         - From Ops
             - Structured Logging by tenant id, able to trace a message through the system
         - From SE
@@ -87,16 +83,12 @@
     - Need to understand performance
     - XTDB per client?
         - Ideally no
-        - does XTDB support sharding?
-- Separate solutions for managing batch vs. streaming
-    - Dataflow for streaming
-    - XTDB for batch
+        - does XTDB support sharding
 - SADA
     - What are the costs of Dataflow?
 - ELT
     - Take data, process to parquet, dump to storage somewhere
 - Lift & Shift Statefun
-    - Everything except Greetly
 - Two Separate solutions, one to handle out of order, one to handle realtime, realtime pulls from out of order until it needs enrichment
 - Need to have data in BigQuery
 - Kafka Connect?

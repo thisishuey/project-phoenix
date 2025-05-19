@@ -85,11 +85,11 @@ Project Phoenix is the first phase of a comprehensive Data Fabric migration stra
 
 #### Reference Documents
 
-- [Architecture Notes](source/architecture-notes.md)
-- [Ambrosia System Architecture Summary](source/ambrosia-system-arcitecture-summary.md)
-- [BigQuery Tables and Schemas](source/bigquery-tables-and-schema-20250508.md)
-- [GoBots Project Phoenix Notes](source/gobots-project-phoenix-notes.md)
-- [Luna Ambrosia Feedback](source/luna-ambrosia-feedback.md)
+- [Architecture Notes](https://officespacesoftware.atlassian.net/wiki/spaces/ENGINEERIN/pages/3022389250)
+- [Ambrosia System Architecture Summary](https://officespacesoftware.atlassian.net/wiki/spaces/ENGINEERIN/pages/3022618642)
+- [BigQuery Tables and Schemas](https://officespacesoftware.atlassian.net/wiki/spaces/ENGINEERIN/pages/3016622113)
+- [GoBots Project Phoenix Notes](https://officespacesoftware.atlassian.net/wiki/spaces/ENGINEERIN/pages/2941124612)
+- [Luna Ambrosia Feedback](https://officespacesoftware.atlassian.net/wiki/spaces/ENGINEERIN/pages/3011018776)
 
 ## 3. Current System Analysis
 
@@ -1340,7 +1340,6 @@ To validate key architectural decisions and mitigate risks, the project will inc
    - Complete architecture documentation
    - Detailed implementation guides
    - Operational runbooks
-   - Knowledge transfer to Phase 2 team
 
 3. **Operational Stability**:
    - Consistent performance within SLAs
