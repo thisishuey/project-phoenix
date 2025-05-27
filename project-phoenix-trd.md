@@ -250,30 +250,31 @@ The current operational approach for Ambrosia has several challenges:
 - **NF8**: The system must handle growth in data volume and throughput of 20% year-over-year.
 - **NF9**: The system must support entity scaling without manual intervention, addressing current limitations with large entities like Sites.
 - **NF10**: The system must scale efficiently for both continuous processing and burst loads (such as large imports).
+- **NF11**: The system must support incremental deployment with feature flags to enable controlled rollouts and easy rollbacks.
 
 #### 4.2.3 Reliability and Availability Targets
 
-- **NF11**: The system must achieve 99.9% reliability for event processing (successful completion).
-- **NF12**: The system must implement automatic recovery mechanisms for common failure scenarios.
-- **NF13**: The system must provide redundancy for critical components to prevent single points of failure.
-- **NF14**: The system must gracefully handle dependent service outages (Kafka, BigQuery) with appropriate retry mechanisms.
-- **NF15**: The system must implement a dead-letter queue for events that cannot be processed after multiple attempts.
+- **NF12**: The system must achieve 99.9% reliability for event processing (successful completion).
+- **NF13**: The system must implement automatic recovery mechanisms for common failure scenarios.
+- **NF14**: The system must provide redundancy for critical components to prevent single points of failure.
+- **NF15**: The system must gracefully handle dependent service outages (Kafka, BigQuery) with appropriate retry mechanisms.
+- **NF16**: The system must implement a dead-letter queue for events that cannot be processed after multiple attempts.
 
 #### 4.2.4 Data Consistency Requirements
 
-- **NF16**: The system must ensure that the state of entities in BigQuery accurately reflects the processed events.
-- **NF17**: The system must handle concurrent updates to the same entity in a consistent manner.
-- **NF18**: The system must maintain referential integrity between related entities.
-- **NF19**: The system must provide mechanisms to detect and reconcile data inconsistencies.
-- **NF20**: The system must ensure that data in BigQuery is consistent with source systems, allowing for the expected processing delay.
+- **NF17**: The system must ensure that the state of entities in BigQuery accurately reflects the processed events.
+- **NF18**: The system must handle concurrent updates to the same entity in a consistent manner.
+- **NF19**: The system must maintain referential integrity between related entities.
+- **NF20**: The system must provide mechanisms to detect and reconcile data inconsistencies.
+- **NF21**: The system must ensure that data in BigQuery is consistent with source systems, allowing for the expected processing delay.
 
 #### 4.2.5 Security and Compliance Requirements
 
-- **NF21**: The system must implement appropriate authentication and authorization for all components.
-- **NF22**: The system must encrypt data in transit and at rest.
-- **NF23**: The system must maintain audit logs for all data processing activities.
-- **NF24**: The system must comply with GDPR requirements for personal data handling.
-- **NF25**: The system must implement appropriate data access controls based on client organization boundaries.
+- **NF22**: The system must implement appropriate authentication and authorization for all components.
+- **NF23**: The system must encrypt data in transit and at rest.
+- **NF24**: The system must maintain audit logs for Dataflow pipeline activities, including pipeline starts, stops, scaling events, and processing errors. The audit logs must not require changes to the Kafka message format.
+- **NF25**: The system must comply with GDPR requirements for personal data handling.
+- **NF26**: The system must implement appropriate data access controls based on client organization boundaries.
 
 ### 4.3 Operational Requirements
 
@@ -448,6 +449,12 @@ The Project Phoenix architecture will replace the current Flink StateFun compone
    - Immutable database with temporal query capabilities
    - Could be used for complex temporal data enrichment
    - Provides "bitemporal" modeling for handling out-of-order events
+
+4. **Performance Testing Tools**:
+   - Load testing frameworks for pipeline validation
+   - Simulated event generation for stress testing
+   - Performance monitoring and analysis tools
+   - Benchmarking capabilities for optimization
 
 #### Rationale for Technology Choices
 
