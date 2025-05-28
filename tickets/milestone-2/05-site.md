@@ -1,7 +1,7 @@
 # Implement Site Management
 
 ## Description
-Implement Site Management functionality for handling site-related events, maintaining relationships with floors and employees, and tracking employee presence in the visitor management system.
+Implement Site Management functionality for handling site-related events, maintaining relationships with floors and employees, and tracking employee presence.
 
 ## Acceptance Criteria
 

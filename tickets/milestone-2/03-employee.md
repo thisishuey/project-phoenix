@@ -1,15 +1,15 @@
 # Implement Employee Management
 
 ## Description
-Implement Employee Management functionality for handling employee profiles, presence tracking, and site assignments in the visitor management system.
+Implement Employee Management functionality for handling employee information and presence tracking.
 
 ## Acceptance Criteria
 
-### Profile Management
+### Employee Information
 ```gherkin
 Given an employee creation or update event
 When it is processed by the event pipeline
-Then the employee profile should be properly stored
+Then the employee information should be properly stored
 And the state should be updated
 And the event should be processed in order
 ```

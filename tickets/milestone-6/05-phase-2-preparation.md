@@ -1,4 +1,4 @@
-# Prepare for Phase 2 with Luna
+# Prepare for Phase 2
 
 ## Description
 Complete all necessary preparations for the transition to Phase 2 of the project, including Luna integration planning and knowledge transfer.

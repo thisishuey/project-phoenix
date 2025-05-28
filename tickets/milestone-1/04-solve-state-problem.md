@@ -1,7 +1,7 @@
 # Solve State Management Problem
 
 ## Description
-Investigate and implement a solution for state management in the Dataflow pipeline, evaluating options including XTDB, raw events in BigQuery, Materialize, and Postgres with time extensions.
+Investigate and implement a solution for state management in the Dataflow pipeline, evaluating options including XTDB, raw events in BigQuery, and Materialize.
 
 ## Acceptance Criteria
 ```gherkin
@@ -14,8 +14,7 @@ And it should support historical data processing
 
 ## Technical Notes
 - Review POC details:
-  - Review XTDB details
-  - Evaluate raw events storage in BigQuery
-  - Investigate Materialize for real-time data integration
-  - Research Postgres with time extensions
+  - Review XTDB details - Not Viable
+  - Investigate Materialize for real-time data integration - In Progress
+  - Coordinate with BigTable investigation (see ticket #05)
 - Decide and implement the solution we will move forward with

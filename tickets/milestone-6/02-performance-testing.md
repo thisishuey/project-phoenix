@@ -1,7 +1,7 @@
 # Complete Performance Testing
 
 ## Description
-Conduct comprehensive performance testing of the visitor management system to ensure it meets scalability and reliability requirements.
+Conduct comprehensive performance testing of the new system to ensure it meets scalability and reliability requirements.
 
 ## Acceptance Criteria
 

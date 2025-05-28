@@ -1,22 +1,22 @@
-# Implement Move Management
+# Implement Designation Management
 
 ## Description
-Implement move management functionality in the visitor management system.
+Implement designation management functionality.
 
 ## Acceptance Criteria
 
-### Move Lifecycle
+### Designation Lifecycle
 ```gherkin
-Given a move creation or update event
+Given a designation creation or update event
 When it is processed by the event pipeline
-Then the move record should be properly stored
+Then the designation record should be properly stored
 And the state should be updated
 And the event should be processed in order
 ```
 
 ### Error Handling
 ```gherkin
-Given an invalid move event
+Given an invalid designation event
 When it is processed by the event pipeline
 Then the error should be logged
 And the pipeline should continue processing other events
@@ -24,6 +24,6 @@ And the pipeline should continue processing other events
 
 ## Technical Notes
 - Configure event pipeline to:
-  - Process move lifecycle events
+  - Process designation lifecycle events
   - Enable monitoring and observability
   - Maintain data quality and validation 

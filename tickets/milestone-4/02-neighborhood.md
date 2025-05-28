@@ -1,7 +1,7 @@
 # Implement Neighborhood Management
 
 ## Description
-Implement neighborhood management functionality in the visitor management system.
+Implement neighborhood management functionality.
 
 ## Acceptance Criteria
 

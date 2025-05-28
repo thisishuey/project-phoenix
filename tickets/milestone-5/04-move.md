@@ -1,22 +1,22 @@
-# Implement Desk Booking Management
+# Implement Move Management
 
 ## Description
-Implement desk booking management functionality in the visitor management system.
+Implement move management functionality.
 
 ## Acceptance Criteria
 
-### Booking Lifecycle
+### Move Lifecycle
 ```gherkin
-Given a desk booking creation or update event
+Given a move creation or update event
 When it is processed by the event pipeline
-Then the booking record should be properly stored
+Then the move record should be properly stored
 And the state should be updated
 And the event should be processed in order
 ```
 
 ### Error Handling
 ```gherkin
-Given an invalid booking event
+Given an invalid move event
 When it is processed by the event pipeline
 Then the error should be logged
 And the pipeline should continue processing other events
@@ -24,6 +24,6 @@ And the pipeline should continue processing other events
 
 ## Technical Notes
 - Configure event pipeline to:
-  - Process booking lifecycle events
+  - Process move lifecycle events
   - Enable monitoring and observability
   - Maintain data quality and validation 

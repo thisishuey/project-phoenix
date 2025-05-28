@@ -1,7 +1,7 @@
 # Implement Monitoring Dashboards
 
 ## Description
-Create comprehensive monitoring dashboards for the visitor management system to track performance, usage, and system health.
+Create comprehensive monitoring dashboards for the new system to track performance, usage, and system health.
 
 ## Acceptance Criteria
 

@@ -1,22 +1,22 @@
-# Implement Desk Availability Management
+# Implement Desk Booking Management
 
 ## Description
-Implement desk availability management functionality in the visitor management system.
+Implement desk booking management functionality.
 
 ## Acceptance Criteria
 
-### Availability Lifecycle
+### Booking Lifecycle
 ```gherkin
-Given a desk availability creation or update event
+Given a desk booking creation or update event
 When it is processed by the event pipeline
-Then the availability record should be properly stored
+Then the booking record should be properly stored
 And the state should be updated
 And the event should be processed in order
 ```
 
 ### Error Handling
 ```gherkin
-Given an invalid availability event
+Given an invalid booking event
 When it is processed by the event pipeline
 Then the error should be logged
 And the pipeline should continue processing other events
@@ -24,6 +24,6 @@ And the pipeline should continue processing other events
 
 ## Technical Notes
 - Configure event pipeline to:
-  - Process availability lifecycle events
+  - Process booking lifecycle events
   - Enable monitoring and observability
   - Maintain data quality and validation 

@@ -1,7 +1,7 @@
-# Execute Production Deployment
+# Coordinate Production Deployment
 
 ## Description
-Plan and execute the production deployment of the visitor management system, including the cutover from the old system.
+Plan and coordinate the production deployment of the new system, including the cutover from the old system.
 
 ## Acceptance Criteria
 

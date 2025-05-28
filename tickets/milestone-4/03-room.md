@@ -1,7 +1,7 @@
 # Implement Room Management
 
 ## Description
-Implement room management functionality in the visitor management system.
+Implement room management functionality.
 
 ## Acceptance Criteria
 

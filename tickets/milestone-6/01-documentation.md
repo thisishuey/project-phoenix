@@ -1,7 +1,7 @@
 # Complete System Documentation
 
 ## Description
-Create comprehensive documentation for the visitor management system, including technical specifications, API documentation, and operational guides.
+Create comprehensive documentation for the new system, including technical specifications, API documentation, and operational guides.
 
 ## Acceptance Criteria
 
